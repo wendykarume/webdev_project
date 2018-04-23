@@ -59,7 +59,8 @@ CREATE TABLE `courseunit` (
 CREATE TABLE `faculty` (
   `facultyId` int(60) NOT NULL,
   `Faculty name` varchar(60) NOT NULL,
-  `Courses` varchar(60) NOT NULL
+  `Courses` varchar(60) NOT NULL,
+  `Number of staff` int(60) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
