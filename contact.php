@@ -1,6 +1,4 @@
-<?php
-include 'dbconnect.php';
-?>
+
 <!DOCTYPE html/>
 <html>
 		
@@ -12,10 +10,14 @@ include 'dbconnect.php';
 </head>
 <body>
 	<div class="hero-image">
+        <a href="home.php"><button class="button"><i>Home</i></button></a>
+        <a href="offers.php" ><button class="button"><i>Offers</i></button></a>
+        <a href="about.php"><button class="button"><i>About</i></button></a>  
+        <a href="contact.php"><button class="button"><i>Contact Us</i></button></a>  
  		 <div class="hero-text">
     		<h1 style="font-size:40px"> BlackRose Catering Services</h1>
     		<p><h2 style="font-size:160%">Where tasteful creations begin </h2></p>
-    		<button>Place Order</button>
+    		<a href="order.php"><button>Place Order</button></a>
   		</div>
 	</div>
 <div class="container">
@@ -31,13 +33,13 @@ include 'dbconnect.php';
     		<label for="email"> Email Address</label>
     		<input type="email" name="emailaddress" placeholder="Your email adress(e.g someone@mail.com)">
     		<label for="location"> Location</label>
-    		<select id="location" name="location" >
-      		<option value=" "> </option>
+        <select id="location" name="location" >
+          <option value=" "> </option>
       		<option value="Nairobi CBD">Nairobi CBD</option>
-      		<option value="Madaraka">Madaraka</option>
-      		<option value="Karen">Karen</option>
-      		<option value="South C">South C</option>
-      		<option value="South B">South B</option>
+          <option value="Madaraka">Madaraka</option>
+          <option value="Karen">Karen</option>
+          <option value="South C">South C</option>
+          <option value="South B">South B</option>
     		</select>
         <label for="Feedback"> Feedback</label><br>
         <textarea  type="text" name="feedback" placeholder="Tell us something"></textarea>

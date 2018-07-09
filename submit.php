@@ -1,10 +1,13 @@
 <?php
 		$name = filter_input(INPUT_POST,'fullname');
 	  	$email = filter_input(INPUT_POST,'emailaddress');
-	  	$locate = filter_input(INPUT_POST,'location');
-	 	$feed = filter_input(INPUT_POST,'feedback');
+	  	$pick = filter_input(INPUT_POST,'pickUp');
+	 	$day = filter_input(INPUT_POST,'Day');
+	 	$moment=filter_input(INPUT_POST,'Time');
+	 	$event=filter_input(INPUT_POST,'Event');
+	 	$subject=filter_input(INPUT_POST,'subject');
 
-	  if (!empty($name) && !empty($email) && !empty($feed) ){
+	  if (!empty($name) && !empty($email)){
 		    $servername = "localhost";
 			$username = "root";
 			$password = "";
@@ -16,11 +19,11 @@
 	    die('Connection Error ('  . mysqli_connect_errno() .')'
 		.mysqli_connect_error());
 	} else{
-			$sql = "INSERT INTO customer(name,email,location,feedback) VALUES ('$name','$email','$locate','$feed')";
+			$sql = "INSERT INTO placement(name,email,pick,day,moment,event,subject) VALUES ('$name','$email','$pick','$day','$moment','$event','$subject')";
 					
 				if ($conn->query($sql)){
 							echo "Successful";
-							header("Location:contact.php");
+							header("Location:order.php");
 
 				} else{
 					echo "Error: ".$sql."<br>".$conn->error;
@@ -35,4 +38,3 @@
 
 
 ?>
-
